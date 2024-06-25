@@ -13,4 +13,4 @@ This blueprint is designed to assist in deploying a single node or a Highly Avai
 ## Overview of Deployment Architectures
 
 ### Single Worker Node Setup
-![Single Nodes Deployment](./doc/assets/Architecture-Single-Allora-Worker-Node.png.png)
+![Single Worker Node Deployment](./doc/assets/Architecture-Single-Allora-Worker-Node.png)
