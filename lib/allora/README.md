@@ -30,13 +30,14 @@ This blueprint is designed to assist in deploying a single Allora [Worker Node](
 
 <summary>Well-Architected Checklist</summary>
 
+
 This is the Well-Architected checklist for Allora Worker Nodes implementation of the AWS Blockchain Node Runner app. This checklist takes into account questions from the [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) which are relevant to this workload. Please feel free to add more checks from the framework if required for your workload.
 
 | Pillar                  | Control                           | Question/Check                                                                   | Remarks          |
 |:------------------------|:----------------------------------|:---------------------------------------------------------------------------------|:-----------------|
-| Security                | Network protection                | Are there unnecessary open ports in security groups?                             | Please note that ports 30303 (TCP/UDP) for Scroll are open to public to support P2P protocols. We have to rely on the protection mechanisms built into the Scroll software to protect those ports.   |
+| Security                | Network protection                | Are there unnecessary open ports in security groups?                             |    |
 |                         |                                   | Traffic inspection                                                               | AWS WAF could be implemented for traffic inspection. Additional charges will apply.  |
-|                         | Compute protection                | Reduce attack surface                                                            | This solution uses Ubuntu 20.04 LTS AMI. You may choose to run hardening scripts on it.  |
+|                         | Compute protection                | Reduce attack surface                                                            | This solution uses Canonical, Ubuntu, 24.04 LTS. You may choose to run hardening scripts on it.  |
 |                         |                                   | Enable people to perform actions at a distance                                   | This solution uses AWS Systems Manager for terminal session, not ssh ports.  |
 |                         | Data protection at rest           | Use encrypted Amazon Elastic Block Store (Amazon EBS) volumes                    | This solution uses encrypted Amazon EBS volumes.  |
 |                         | Data protection in transit        | Use TLS                                                                          | By design TLS is not used in Scroll RPC and P2P protocols because the data is considered public. To protect RPC traffic we expose the port only for internal use. |
