@@ -13,12 +13,11 @@ The Allora Network brings together
   - [Reputers](https://docs.allora.network/nops) who determine how accurate workers are after a ground truth is revealed
   - [Validators](https://docs.allora.network/nops) who secure protocol state, history, and reward distributions
 
+With these ingredients, the Allora Network is able to continuously learn and improve itself over time producing inferences that are more accurate than the most accurate participant.
+
 Allora Worker nodes are the interfaces between data scientists' models and the Allora Network. A worker node is a machine-intelligent application registered on the Allora chain that provides inference/prediction on a particular topic it's subscribed to and gets rewarded based on the inference quality.
 
-With these ingredients, the Allora Network is able to continuously improve itself over time and produce inferences that are more accurate than the most accurate participant.
-
-
-This blueprint is designed to assist in deploying a single worker node [Fantom read-only node](https://docs.fantom.foundation/node/tutorials/run-a-read-only-node) on AWS. It is intended for use in development, testing, or Proof of Concept (PoC) purposes.
+This blueprint is designed to assist in deploying a single Allora [worker node](https://v2.docs.allora.network/datasci) on AWS. It is intended for use in development, testing, or Proof of Concept (PoC) purposes.
 
 ## Overview of Deployment Architecture
 
